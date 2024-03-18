@@ -1,0 +1,11 @@
+import Replicate from 'replicate';
+const replicate = new Replicate();
+
+const input = {
+    image: "https://replicate.delivery/pbxt/KYEdDz93eyPMIR0zltb9SzZ4lLTQkH0CfMcmnaGD5wHbA7Dt/MTk4MTczMTkzNzI1Mjg5NjYy.webp",
+    image_to_become: "https://replicate.delivery/pbxt/KYEdDanJM7WAO228dBjJllUErGYq0ysQXgencMcVMDtNW9sf/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjU4NS12MjE2LXRhbmctYXVtLTAxMC1leWUtYXJ0cHJpbnRzLmpwZw.webp"
+};
+
+const output = await replicate.run("fofr/become-image:42cf9559131f57f018bf8cdc239a74f4871c5852045ce8f23b346e4ef8f56aa8", { input });
+console.log(output)
+//=> ["https://replicate.delivery/pbxt/MX4yTSJE9L7xEhrn3A2pKin...
